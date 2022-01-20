@@ -68,7 +68,6 @@ class World:
 
     def count_neighbors(self, i, j):
         neighbor_count = 0
-        neighbors = []
 
         for k in range(i - 1, i + 2):
             for l in range(j - 1, j + 2):
@@ -80,7 +79,6 @@ class World:
                     l < len(self.grid.prev_nodes[0]) and 
                     self.grid.prev_nodes[k][l].alive
                 ):
-                    neighbors.append((k, l))
                     neighbor_count += 1
         return neighbor_count
 
